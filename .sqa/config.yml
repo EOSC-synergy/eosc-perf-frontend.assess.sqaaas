@@ -1,0 +1,56 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/eosc-perf-frontend:
+      branch: main
+      repo: https://github.com/EOSC-synergy/eosc-perf-frontend
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.7
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/EOSC-synergy/eosc-perf-frontend git:
+        commands:
+        - /usr/bin/env sh .sqa/script.beady-white-dachshund.sh
+        container: qc.acc_snazzy-brown-zebu
+  QC.Doc:
+    repos:
+      github.com/EOSC-synergy/eosc-perf-frontend find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.flimsy-blue-bird.sh
+        container: qc.doc_bumpy-periwinkle-maltese
+      github.com/EOSC-synergy/eosc-perf-frontend git:
+        commands:
+        - /usr/bin/env sh .sqa/script.whiny-white-ferret.sh
+        container: qc.doc_geeky-tomato-hyena
+      github.com/EOSC-synergy/eosc-perf-frontend markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.flaky-vermilion-bracke.sh
+        container: qc.doc_beady-smalt-heron
+  QC.Lic:
+    repos:
+      github.com/EOSC-synergy/eosc-perf-frontend licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.whiny-maroon-ocelot.sh
+        container: qc.lic_flabby-salmon-weasel
+  QC.Sty:
+    repos:
+      github.com/EOSC-synergy/eosc-perf-frontend hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.muggy-tangerine-cheetah.sh
+        container: qc.sty_boozy-pink-bat
+      github.com/EOSC-synergy/eosc-perf-frontend jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.pretty-crimson-zebra.sh
+        container: qc.sty_queasy-brass-bonobo
+  QC.Ver:
+    repos:
+      github.com/EOSC-synergy/eosc-perf-frontend get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.scanty-crimson-loon.sh
+        container: qc.ver_foggy-periwinkle-corgi
+timeout: 5400
