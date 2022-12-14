@@ -15,42 +15,48 @@ sqa_criteria:
     repos:
       github.com/EOSC-synergy/eosc-perf-frontend git:
         commands:
-        - /usr/bin/env sh .sqa/script.beady-white-dachshund.sh
-        container: qc.acc_snazzy-brown-zebu
+        - /usr/bin/env sh .sqa/script.crabby-ecru-alligator.sh
+        container: qc.acc_skinny-cinnamon-drever
   QC.Doc:
     repos:
       github.com/EOSC-synergy/eosc-perf-frontend find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.flimsy-blue-bird.sh
-        container: qc.doc_bumpy-periwinkle-maltese
+        - /usr/bin/env sh .sqa/script.squeaky-chestnut-chinook.sh
+        container: qc.doc_skimpy-maroon-coral
       github.com/EOSC-synergy/eosc-perf-frontend git:
         commands:
-        - /usr/bin/env sh .sqa/script.whiny-white-ferret.sh
-        container: qc.doc_geeky-tomato-hyena
+        - /usr/bin/env sh .sqa/script.fuzzy-tan-jaguar.sh
+        container: qc.doc_lousy-pink-axolotl
       github.com/EOSC-synergy/eosc-perf-frontend markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.flaky-vermilion-bracke.sh
-        container: qc.doc_beady-smalt-heron
+        - /usr/bin/env sh .sqa/script.pasty-white-lynx.sh
+        container: qc.doc_foggy-denim-owl
   QC.Lic:
     repos:
       github.com/EOSC-synergy/eosc-perf-frontend licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.whiny-maroon-ocelot.sh
-        container: qc.lic_flabby-salmon-weasel
+        - /usr/bin/env sh .sqa/script.slimy-myrtle-albatross.sh
+        container: qc.lic_beady-charcoal-paradise
+  QC.Met:
+    repos:
+      github.com/EOSC-synergy/eosc-perf-frontend validate_codemeta:
+        commands:
+        - /usr/bin/env sh .sqa/script.wiggy-asparagus-frise.sh
+        container: qc.met_shaggy-scarlet-dragonfly
   QC.Sty:
     repos:
       github.com/EOSC-synergy/eosc-perf-frontend hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.muggy-tangerine-cheetah.sh
-        container: qc.sty_boozy-pink-bat
+        - /usr/bin/env sh .sqa/script.lousy-blue-hare.sh
+        container: qc.sty_crabby-harlequin-meerkat
       github.com/EOSC-synergy/eosc-perf-frontend jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.pretty-crimson-zebra.sh
-        container: qc.sty_queasy-brass-bonobo
+        - /usr/bin/env sh .sqa/script.thirsty-lime-hedgehog.sh
+        container: qc.sty_sickly-lilac-flamingo
   QC.Ver:
     repos:
       github.com/EOSC-synergy/eosc-perf-frontend get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.scanty-crimson-loon.sh
-        container: qc.ver_foggy-periwinkle-corgi
+        - /usr/bin/env sh .sqa/script.silly-blue-bonobo.sh
+        container: qc.ver_cozy-amaranth-koala
 timeout: 5400
