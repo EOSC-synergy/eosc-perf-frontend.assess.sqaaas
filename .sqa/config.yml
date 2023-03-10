@@ -5,7 +5,7 @@ config:
       branch: main
       repo: https://github.com/EOSC-synergy/eosc-perf-frontend
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.7
+      branch: release/1.7.8
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
 environment:
   JPL_DOCKERFORCEBUILD: enabled
@@ -15,48 +15,48 @@ sqa_criteria:
     repos:
       github.com/EOSC-synergy/eosc-perf-frontend git:
         commands:
-        - /usr/bin/env sh .sqa/script.crabby-ecru-alligator.sh
-        container: qc.acc_skinny-cinnamon-drever
+        - /usr/bin/env sh .sqa/script.homey-corn-barnacle.sh
+        container: qc.acc_wheezy-cobalt-sponge
   QC.Doc:
     repos:
       github.com/EOSC-synergy/eosc-perf-frontend find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.squeaky-chestnut-chinook.sh
-        container: qc.doc_skimpy-maroon-coral
+        - /usr/bin/env sh .sqa/script.crabby-heliotrope-dollar.sh
+        container: qc.doc_squeaky-cinnamon-spitz
       github.com/EOSC-synergy/eosc-perf-frontend git:
         commands:
-        - /usr/bin/env sh .sqa/script.fuzzy-tan-jaguar.sh
-        container: qc.doc_lousy-pink-axolotl
+        - /usr/bin/env sh .sqa/script.tacky-gamboge-opossum.sh
+        container: qc.doc_scaly-tangerine-chameleon
       github.com/EOSC-synergy/eosc-perf-frontend markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.pasty-white-lynx.sh
-        container: qc.doc_foggy-denim-owl
+        - /usr/bin/env sh .sqa/script.blurry-charcoal-lion.sh
+        container: qc.doc_paltry-cream-spitz
   QC.Lic:
     repos:
       github.com/EOSC-synergy/eosc-perf-frontend licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.slimy-myrtle-albatross.sh
-        container: qc.lic_beady-charcoal-paradise
+        - /usr/bin/env sh .sqa/script.frumpy-malachite-peccary.sh
+        container: qc.lic_squeaky-pumpkin-hound
   QC.Met:
     repos:
       github.com/EOSC-synergy/eosc-perf-frontend validate_codemeta:
         commands:
-        - /usr/bin/env sh .sqa/script.wiggy-asparagus-frise.sh
-        container: qc.met_shaggy-scarlet-dragonfly
+        - /usr/bin/env sh .sqa/script.bluesy-bronze-wombat.sh
+        container: qc.met_woolly-salmon-sheepdog
   QC.Sty:
     repos:
       github.com/EOSC-synergy/eosc-perf-frontend hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.lousy-blue-hare.sh
-        container: qc.sty_crabby-harlequin-meerkat
+        - /usr/bin/env sh .sqa/script.dorky-pink-dachsbracke.sh
+        container: qc.sty_lanky-sepia-turkey
       github.com/EOSC-synergy/eosc-perf-frontend jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.thirsty-lime-hedgehog.sh
-        container: qc.sty_sickly-lilac-flamingo
+        - /usr/bin/env sh .sqa/script.muzzy-ruby-wolfhound.sh
+        container: qc.sty_paltry-cardinal-mole
   QC.Ver:
     repos:
       github.com/EOSC-synergy/eosc-perf-frontend get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.silly-blue-bonobo.sh
-        container: qc.ver_cozy-amaranth-koala
+        - /usr/bin/env sh .sqa/script.whiny-chartreuse-fly.sh
+        container: qc.ver_flaky-cinnamon-caiman
 timeout: 5400
